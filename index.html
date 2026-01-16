@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qarshad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div id="loginSection" class="container">
+        <div class="login-card">
+            <h1>qarashad</h1>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div class="password-requirements">
+                        <p class="requirement-label">Password must contain:</p>
+                        <ul class="requirements-list">
+                            <li id="req-length" class="requirement-item">user:Muzamil password:Muzamil123!@#</li>
+                            <li id="req-length" class="requirement-item">At least 12 characters</li>
+                            <li id="req-uppercase" class="requirement-item">One uppercase letter</li>
+                            <li id="req-lowercase" class="requirement-item">One lowercase letter</li>
+                            <li id="req-number" class="requirement-item">One number</li>
+                            <li id="req-symbol" class="requirement-item">One symbol</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="loginError" class="error-message"></div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div id="expensesSection" class="container hidden">
+        <div class="expenses-header">
+            <h1>Qarshad</h1>
+            
+        </div>
+
+        <div class="expenses-content">
+            
+            <div class="expense-form-card">
+                <h2>Add New Expense</h2>
+                <form id="expenseForm">
+                    <div class="form-group">
+                        <label for="expenseName">nuca qarashka</label>
+                        <input type="text" id="expenseName" name="expenseName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="rashin">rashin</option>
+                            <option value="bajaj raac">bajaj raac</option>
+                            
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">lacagta ($)</label>
+                        <input type="number" id="amount" name="amount" step="0.01" min="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div id="expenseError" class="error-message"></div>
+                    <div id="expenseSuccess" class="success-message"></div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-primary">kudar qarashka</button>
+                        <button type="button" id="clearBtn" class="btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </div>
+
+           
+            <div class="expenses-display-card">
+                <div class="expenses-list-header">
+                    <h2>Qarashadka baxay</h2>
+                    <button type="button" id="clearListBtn" class="btn-secondary">Clear List</button>
+                </div>
+                <div id="expensesList" class="expenses-list">
+                    <p class="no-expenses">wax qarasha ah kuma jiro</p>
+                </div>
+                <div class="total-section">
+                    <h3>dhaman qarashka: $<span id="totalAmount">0.00</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
